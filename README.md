@@ -1,10 +1,12 @@
 # Training a LSTM neural Network
 
-Multi-layer Recurrent Neural Networks (LSTM, RNN) for character-level language models in Python using Tensorflow and modified to work with [tensorflow.js](https://js.tensorflow.org/) and [ml5js](https://ml5js.org/)
+> Multi-layer Recurrent Neural Networks (LSTM, RNN) for character-level language models in Python using Tensorflow and modified to work with [tensorflow.js](https://js.tensorflow.org/) and [ml5js](https://ml5js.org/)
 
-Based on [char-rnn-tensorflow](https://github.com/sherjilozair/char-rnn-tensorflow).
+>  Based on [char-rnn-tensorflow](https://github.com/sherjilozair/char-rnn-tensorflow).
 
-[Here](https://www.youtube.com/watch?v=xfuVcfwtEyw) is a video to help you get started with training LSTM with [Spell](https://www.spell.run/)
+> [Here](https://www.youtube.com/watch?v=xfuVcfwtEyw) is a video to help you get started with training LSTM with [Spell](https://www.spell.run/)
+
+> _ (original by [yining1023](https://github.com/yining1023))_
 
 ## outline
 
@@ -12,6 +14,10 @@ Based on [char-rnn-tensorflow](https://github.com/sherjilozair/char-rnn-tensorfl
   * [mscOs](#macOs-installation)
   * [windows](#windows-installation)
 * [getting started with LSTM](#getting-started-with-LSTM)
+  * [collect data](#collect-data)
+  * [train on own machine](#train-on-own-machine)
+  * [train on spell](#train-on-spell)
+  * [use it!](#use-it!)
 ## Requirements
 
 Set up a __python environment__ with tensorflow installed (original instruction [here](https://ml5js.org/docs/training-setup.html))
@@ -95,30 +101,40 @@ _(it is possible to find the original instructions [here](https://docs.conda.io/
 
 ### getting started with LSTM
 
-Start by [downloading](https://github.com/ml5js/training-lstm) or cloning this repository:
+Start by [downloading](https://github.com/s4ac/training-lstm) or cloning this repository:
 
 ```bash
-git clone https://github.com/ml5js/training-lstm.git
+git https://github.com/s4ac/training-lstm.git
 cd training-lstm
 ```
 
-### 2) Collect data
+### collect data
 
-LSTMs work well when you want predict sequences or patterns from your inputs. Try to gather as much input data as you can. The more the better. 
+LSTMs work well when you want predict sequences or patterns from your inputs. Try to gather as much input data as you can. The more the better!
+
+__where to find data?__
+
+* [project gutenberg](https://www.gutenberg.org/wiki/Main_Page)
+* [opus](http://opus.nlpl.eu/index.php)
+
+__do a data clean up!__
 
 Once your data is ready, create a new folder in the `root` of this project and inside that folder you should have one file called `input.txt` that contains all your training data.
 
 _(A quick tip to concatenate many small disparate `.txt` files into one large training file: `ls *.txt | xargs -L 1 cat >> input.txt`)_
 
-### 2) Train
+### train on own machine
 
 Run the training script with the default settings: 
 
 ```bash
 #turn on conda environment
 source activate env_name
-
+#install requirements
+python -r requirements.txt
+#train the model
 python train.py --data_dir=./folder_with_my_custom_data
+#the folder where the input.txt file is
 ```
 
 Or you can specify the hyperparameters you want depending on the training set, size of your data, etc:
@@ -148,7 +164,11 @@ python train.py --data_dir=./bronte \
 --save_model ./models
 ```
 
-### 3) Use it!
+### train on spell
+
+
+
+### use it!
 
 Once the model is ready, you'll just need to point to it in your ml5 sketch:
 
