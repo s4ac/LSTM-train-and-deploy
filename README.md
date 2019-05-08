@@ -6,7 +6,7 @@
 
 > [Here](https://www.youtube.com/watch?v=xfuVcfwtEyw) is a video to help you get started with training LSTM with [Spell](https://www.spell.run/)
 
-> _ (original by [yining1023](https://github.com/yining1023))_
+> _(original by [yining1023](https://github.com/yining1023))_
 
 ## outline
   - [Requirements](#requirements)
