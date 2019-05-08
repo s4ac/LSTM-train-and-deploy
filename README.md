@@ -9,15 +9,14 @@
 > _ (original by [yining1023](https://github.com/yining1023))_
 
 ## outline
-
-* [Requirements](#Requirements)
-  * [mscOs](#macOs-installation)
-  * [windows](#windows-installation)
-* [getting started with LSTM](#getting-started-with-LSTM)
-  * [collect data](#collect-data)
-  * [train on own machine](#train-on-own-machine)
-  * [train on spell](#train-on-spell)
-  * [use it!](#use-it!)
+  - [Requirements](#requirements)
+    - [macOs installation](#macos-installation)
+    - [windows installation](#windows-installation)
+  - [getting started with LSTM](#getting-started-with-lstm)
+    - [collect data](#collect-data)
+    - [train on own machine](#train-on-own-machine)
+    - [train on spell](#train-on-spell)
+    - [use it!](#use-it)
 ## Requirements
 
 Set up a __python environment__ with tensorflow installed (original instruction [here](https://ml5js.org/docs/training-setup.html))
@@ -94,19 +93,14 @@ _(it is possible to find the original instructions [here](https://docs.conda.io/
    ```bash
    conda list
    ```
-
--------------
-
-
-
 ### getting started with LSTM
 
 Start by [downloading](https://github.com/s4ac/training-lstm) or cloning this repository:
 
-```bash
-git https://github.com/s4ac/training-lstm.git
-cd training-lstm
-```
+  ```bash
+  git https://github.com/s4ac/training-lstm.git
+  cd training-lstm
+  ```
 
 ### collect data
 
@@ -125,17 +119,17 @@ _(A quick tip to concatenate many small disparate `.txt` files into one large tr
 
 ### train on own machine
 
-Run the training script with the default settings: 
+Run the training script with the default settings:
 
-```bash
-#turn on conda environment
-source activate env_name
-#install requirements
-python -r requirements.txt
-#train the model
-python train.py --data_dir=./folder_with_my_custom_data
-#the folder where the input.txt file is
-```
+  ```bash
+  #turn on conda environment
+  source activate env_name
+  #install requirements
+  python -r requirements.txt
+  #train the model
+  python train.py --data_dir=./folder_with_my_custom_data
+  #the folder where the input.txt file is
+  ```
 
 Or you can specify the hyperparameters you want depending on the training set, size of your data, etc:
 
@@ -144,28 +138,19 @@ python train.py --data_dir=./folder_with_my_custom_data --rnn_size 128 --num_lay
 ```
 
 This will train your model and save a JavaScript version **in a folder called `./models`**, if you don't specify a different path.
-
-You can also run the script called `run.sh`:
-
-```bash
-bash run.sh
-```
-
-This file contains the same parameters as the one's described before:
-```bash
-# This are the hyperparameters you can change to fit your data
-python train.py --data_dir=./bronte \
---rnn_size 128 \
---num_layers 2 \
---seq_length 50 \
---batch_size 50 \
---num_epochs 50 \
---save_checkpoints ./checkpoints \
---save_model ./models
-```
-
 ### train on spell
-
+spell works better in combination with __git__
+1. make an account on [spell](https://web.spell.run)
+2. install __spell__ on your machine
+   ```bash
+   pip install spell
+   ```
+3. run on spell server
+      ```bash
+     #train the model
+     spell run "python train.py --data_dir=./folder_with_my_custom_data"
+     #the folder where the input.txt file is
+     ```
 
 
 ### use it!
