@@ -24,22 +24,28 @@ Set up a __python environment__ with tensorflow installed (original instruction 
 ### macOs installation
 
 1. install miniconda from [here](https://docs.conda.io/en/latest/miniconda.html)
-   2. choose Python 3.7 (bash installer) and download
+   1. choose Python 3.7 (bash installer) and download
+   
    2. open terminal and type
-
-   ```bash
-   bash path/to/file/just/downloaded
-   #usually is in /Downloads/file_name
-   #you ca also type bash [blank space] and drag the file onto terminal
-   ```
-
-   1. Review the license and approve the license terms - type in `yes` and press enter
-   2. Press `Enter` again to confirm the location of install
-   3. Type `yes` when it asks you if the install location should be prepended to PATH
-   4. Restart Terminal for changes to take effect
-   5. Type: `conda info`
-   6. If it prints out some stuff then it has installed correctly
-
+   
+   3. ```bash
+      bash path/to/file/just/downloaded
+      #usually is in /Downloads/file_name
+      #you ca also type bash [blank space] and drag the file onto terminal
+      ```
+   
+   5. Review the license and approve the license terms - type in `yes` and press enter
+   
+   6. Press `Enter` again to confirm the location of install
+   
+   7. Type `yes` when it asks you if the install location should be prepended to PATH
+   
+   8. Restart Terminal for changes to take effect
+   
+   9. Type: `conda info`
+   
+   10. If it prints out some stuff then it has installed correctly
+   
 2. create environment (you should create environments for each neural network: for example one for __LSTM__ one for __pix2pix__)
 
    ```bash
