@@ -101,11 +101,11 @@ _(it is possible to find the original instructions [here](https://docs.conda.io/
    ```
 ### getting started with LSTM
 
-Start by [downloading](https://github.com/s4ac/training-lstm) or cloning this repository:
+Start by [downloading](https://github.com/s4ac/LSTM-train-and-deploy.git) or cloning this repository:
 
   ```bash
-  git https://github.com/s4ac/training-lstm.git
-  cd training-lstm
+  git https://github.com/s4ac/LSTM-train-and-deploy.git
+  cd LSTM-train-and-deploy
   ```
 
 ### collect data
@@ -160,6 +160,8 @@ spell works better in combination with __git__
 
 
 ### use it!
+
+Go to [deploy](https://github.com/s4ac/LSTM-train-and-deploy/tree/master/deploy), to see 👀 how to use the model to generate text
 
 Once the model is ready, you'll just need to point to it in your ml5 sketch:
 

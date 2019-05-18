@@ -1,37 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:600|Source+Code+Pro:600');
-#content {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
-    padding: 5px;
-    overflow-y: scroll;
+*{
+    box-sizing: border-box;
 }
-.yano, .darwin{
-    margin: 0.5em 0px 0.5em 0px;
-    /* text-align: justify; */
-    line-height: 1em;
+html{
+    font-size: 100%;
 }
-/* .text{
-    width: 100%;
-    background-color: antiquewhite;
-} */
-.yano {
-    color: #00f;
-    font-weight: bolder;
-    width: 80%;
-    font-size: 7vh;
-    font-family: 'Source Code Pro', monospace;
-    text-align: right;
-    float: right;
+body{
+    padding: 0px;
+    margin: 0px;
+}
+#status{
+    /* style the status */
+    background-color: #00f;
+    color: #0f0;
+    padding: 0.2rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.darwin {
-    color: #f00;
-    width: 80%;
-    font-size: 7vh;
-    font-family: 'EB Garamond', serif;
-    text-align: left;
-    float: left;
+#seed{
+    /* style the seed text */
+    padding: 0.25rem;
+    margin: 0.25rem;
+    width: 200px;
+    height: 300px;
+    outline: solid 2px #00f;
+}
+#sliders{
+    padding: 0.25rem;
+    margin: 0.25rem;
+    width: 200px;
+    height: auto;
+    outline: solid 2px #00f;
 }
